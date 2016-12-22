@@ -55,9 +55,9 @@
             android:paddingBottom="@dimen/folder_label_padding_bottom"
             android:paddingTop="@dimen/folder_label_padding_top"
             android:singleLine="true"
-            android:textColor="#EE777777"
+            android:textColor="@color/folder_name_text_color_normalized"
             android:textColorHighlight="#ffCCCCCC"
-            android:textColorHint="#ff808080"
+            android:textColorHint="@color/folder_name_text_color_hint"
             android:textSize="@dimen/folder_label_text_size" />
 
         <com.android.launcher3.pageindicators.PageIndicatorDots

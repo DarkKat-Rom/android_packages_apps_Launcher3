@@ -20,7 +20,7 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.launcher3">
-    <uses-sdk android:targetSdkVersion="23" android:minSdkVersion="21"/>
+    <uses-sdk android:targetSdkVersion="25" android:minSdkVersion="21"/>
     <!--
     Manifest entries specific to Launcher3. This is merged with AndroidManifest-common.xml.
     Refer comments around specific entries on how to extend individual components.
@@ -90,6 +90,7 @@
         <activity
             android:name="com.android.launcher3.SettingsActivity"
             android:label="@string/settings_button_text"
+            android:theme="@android:style/Theme.DeviceDefault.Settings"
             android:autoRemoveFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.APPLICATION_PREFERENCES" />

@@ -89,7 +89,7 @@
         <item name="android:paddingEnd">@dimen/deep_shortcut_padding_end</item>
         <item name="android:drawableEnd">@drawable/deep_shortcuts_drag_handle</item>
         <item name="android:drawablePadding">@dimen/deep_shortcut_drawable_padding</item>
-        <item name="android:textColor">#FF212121</item>
+        <item name="android:textColor">@color/deep_shortcuts_text_color</item>
         <item name="android:textSize">14sp</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:shadowRadius">0</item>
