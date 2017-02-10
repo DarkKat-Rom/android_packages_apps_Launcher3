@@ -28,6 +28,7 @@ import android.app.Activity;
 import android.app.ActivityOptions;
 import android.app.AlertDialog;
 import android.app.SearchManager;
+import android.app.UiModeManager;
 import android.appwidget.AppWidgetHostView;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProviderInfo;
@@ -496,7 +497,8 @@ public class Launcher extends Activity
      * @param activate if true, make sure the status bar is light, otherwise base on wallpaper.
      */
     public void activateLightStatusBar(boolean activate) {
-        boolean lightStatusBar = activate || (FeatureFlags.LIGHT_STATUS_BAR
+
+        boolean lightStatusBar = (isThemeLight() && activate) || (FeatureFlags.LIGHT_STATUS_BAR
                 && mExtractedColors.getColor(ExtractedColors.STATUS_BAR_INDEX,
                 ExtractedColors.DEFAULT_DARK) == ExtractedColors.DEFAULT_LIGHT);
         int oldSystemUiFlags = getWindow().getDecorView().getSystemUiVisibility();
@@ -509,6 +511,12 @@ public class Launcher extends Activity
         if (newSystemUiFlags != oldSystemUiFlags) {
             getWindow().getDecorView().setSystemUiVisibility(newSystemUiFlags);
         }
+    }
+
+    private boolean isThemeLight() {
+        final UiModeManager uiManager = (UiModeManager) getSystemService(
+                Context.UI_MODE_SERVICE);
+        return uiManager.getNightMode() == 1;
     }
 
     private LauncherCallbacks mLauncherCallbacks;
