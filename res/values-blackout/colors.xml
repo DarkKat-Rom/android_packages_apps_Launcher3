@@ -15,7 +15,8 @@
 -->
 
 <resources>
-    <!-- Blackout theme -->
+
+    <!-- Night (Blackout) theme colors -->
     <color name="folder_edge_effect_color">#ffffffff</color>
 
     <color name="quantum_panel_text_color">#ffffffff</color>

@@ -15,8 +15,7 @@
 -->
 
 <resources>
-    <!-- Day theme
-         Addinional colors -->
+    <!-- Day (Material.Light) theme, additional colors -->
     <color name="folder_name_text_color">#ff777777</color>
     <color name="folder_name_text_color_normalized">#ee777777</color>
     <color name="folder_name_text_color_hint">#ff808080</color>
