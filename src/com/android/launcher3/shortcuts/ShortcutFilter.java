@@ -28,7 +28,7 @@ import java.util.List;
  */
 public class ShortcutFilter {
 
-    public static final int MAX_SHORTCUTS = 4;
+    public static final int MAX_SHORTCUTS = 5;
     @VisibleForTesting static final int NUM_DYNAMIC = 2;
 
     /**
